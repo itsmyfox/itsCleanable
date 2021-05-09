@@ -1,5 +1,8 @@
 Внимание, кодировка по стандарту для нормальной работы скриптов 866. По этому на gitHub может отображаться не корректно!
 
+# Запускаем itsCleanable START.bat от имени Администратора.
+Обязательно должны лежать рядом itsCleanable.bat и itsDiagnostic.bat
+
 # ===itsCleanable.bat + itsDiagnostic.bat | Версия 1.0.6:===
 
 09.05.2021 Update
