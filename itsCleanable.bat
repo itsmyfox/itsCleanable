@@ -1,13 +1,18 @@
 @echo off
-set Version=1.0.6
-title Очистка диска "itsCleanable | Version: %Version%
+chcp 866
+set Username=СИСТЕМА
+set Version=1.0.9
+set Dates=17.05.2021
+title Очистка диска "itsCleanable | Version: %Version% | Update %Dates%
 
-echo Через 7 секунд запуститься скрипт 'itsCleanable.bat / Version %Version% / Обновление от 06.05.2021' - очистки диска от временных и неиспользуемых файлов. Если не хотите этого делать, нажмите комбинацию 'ctrl + c'
+echo Через 7 секунд запуститься скрипт 'itsCleanable.bat / Version %Version% / Обновление от %Dates%' - очистки диска от временных и неиспользуемых файлов. Если не хотите этого делать, нажмите комбинацию 'ctrl + c'
 
 For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a-%%b)
 
-mkdir C:\Logs\
-fsutil volume diskfree C:\ > C:\Logs\log-volume-start-itsCleanable_%date:~0,2%-%date:~3,2%-%date:~8,2%_%mytime%.txt
+chcp 1251
+mkdir C:\LogsCache\
+fsutil volume diskfree C:\ > C:\LogsCache\log-volume-start-itsCleanable_%date:~0,2%-%date:~3,2%-%date:~8,2%_%mytime%.txt
+chcp 866
 fsutil volume diskfree C:\
 
 
@@ -22,7 +27,41 @@ echo Остановка службы 'Центр обновления Windows'
 timeout 2
 net stop wuauserv
 
-
+echo ===
+echo ========== Выдаю особые права на временные папки ==========
+echo ===
+timeout 2
+TAKEOWN /f "%WINDIR%\Logs" /r /d y && ICACLS "%WINDIR%\Logs" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\logs" /r /d y && ICACLS "%SystemDrive%\logs" /grant %Username%:F /t
+TAKEOWN /f "%WINDIR%\Temp" /r /d y && ICACLS "%WINDIR%\Temp" /grant %Username%:F /t
+TAKEOWN /f "%WINDIR%\SoftwareDistribution\Download" /r /d y && ICACLS "%WINDIR%\SoftwareDistribution\Download" /grant %Username%:F /t
+TAKEOWN /f "%WINDIR%\assembly\NativeImages_v4.0.30319_64\temp" /r /d y && ICACLS "%WINDIR%\assembly\NativeImages_v4.0.30319_64\temp" /grant %Username%:F /t
+TAKEOWN /f "%WINDIR%\assembly\NativeImages_v2.0.50727_64\temp" /r /d y && ICACLS "%WINDIR%\assembly\NativeImages_v2.0.50727_64\temp" /grant %Username%:F /t
+TAKEOWN /f "%WINDIR%\assembly\NativeImages_v4.0.30319_32\temp" /r /d y && ICACLS "%WINDIR%\assembly\NativeImages_v4.0.30319_32\temp" /grant %Username%:F /t
+TAKEOWN /f "%WINDIR%\assembly\temp" /r /d y && ICACLS "%WINDIR%\assembly\temp" /grant %Username%:F /t
+TAKEOWN /f "%WINDIR%\assembly\tmp" /r /d y && ICACLS "%WINDIR%\assembly\tmp" /grant %Username%:F /t
+TAKEOWN /f "%WINDIR%\SoftwareDistribution\Download\SharedFileCache" /r /d y && ICACLS "%WINDIR%\SoftwareDistribution\Download\SharedFileCache" /grant %Username%:F /t
+TAKEOWN /f "%USERPROFILE%\AppData\Local\Temp" /r /d y && ICACLS "%USERPROFILE%\AppData\Local\Temp" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\Users\User\AppData\Local\Temp" /r /d y && ICACLS "%SystemDrive%\Users\User\AppData\Local\Temp" /grant %Username%:F /t
+TAKEOWN /f "C:\Users\Администратор\AppData\Local\Temp" /r /d y && ICACLS "C:\Users\Администратор\AppData\Local\Temp" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\ProgramData\Microsoft\Diagnosis" /r /d y && ICACLS "%SystemDrive%\ProgramData\Microsoft\Diagnosis" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\ProgramData\Kaspersky Lab\KES\Temp" /r /d y && ICACLS "%SystemDrive%\ProgramData\Kaspersky Lab\KES\Temp" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\ProgramData\KasperskyLab\adminkit\1103\$FTCITmp" /r /d y && ICACLS "%SystemDrive%\ProgramData\KasperskyLab\adminkit\1103\$FTCITmp" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\ProgramData\Intel\Logs" /r /d y && ICACLS "%SystemDrive%\ProgramData\Intel\Logs" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\ProgramData\Intel\Package Cache" /r /d y && ICACLS "%SystemDrive%\ProgramData\Intel\Package Cache" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\ProgramData\Crypto Pro\Installer Cache" /r /d y && ICACLS "%SystemDrive%\ProgramData\Crypto Pro\Installer Cache" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\ProgramData\Package Cache" /r /d y && ICACLS "%SystemDrive%\ProgramData\Package Cache" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\ProgramData\Oracle\Java\installcache_x64" /r /d y && ICACLS "%SystemDrive%\ProgramData\Oracle\Java\installcache_x64" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\ProgramData\LANDesk\Log" /r /d y && ICACLS "%SystemDrive%\ProgramData\LANDesk\Log" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\ProgramData\Crypto Pro\Installer Cache" /r /d y && ICACLS "%SystemDrive%\ProgramData\Crypto Pro\Installer Cache" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\ProgramData\Intel\Logs" /r /d y && ICACLS "%SystemDrive%\ProgramData\Intel\Logs" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\ProgramData\LANDesk\Temp" /r /d y && ICACLS "%SystemDrive%\ProgramData\LANDesk\Temp" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\Intel" /r /d y && ICACLS "%SystemDrive%\Intel" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\SWSetup" /r /d y && ICACLS "%SystemDrive%\SWSetup" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\MSOCache\All Users" /r /d y && ICACLS "%SystemDrive%\MSOCache\All Users" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\AMD" /r /d y && ICACLS "%SystemDrive%\AMD" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\$WINDOWS.~BT" /r /d y && ICACLS "%SystemDrive%\$WINDOWS.~BT" /grant %Username%:F /t
+TAKEOWN /f "%SystemDrive%\Windows10Upgrade" /r /d y && ICACLS "%SystemDrive%\Windows10Upgrade" /grant %Username%:F /t
 echo ===
 echo ========== Очистка диска от временных файлов ==========
 echo ===
@@ -31,9 +70,11 @@ echo ===
 echo ========== Очистка в папке "C:\Windows" ==========
 echo ===
 
-echo Удаление временных файлов в директории 'C:\Windows\Logs\'
+echo Удаление временных файлов в директории 'C:\Windows\Logs\' и 'C:\logs\'
 timeout 2
 del "%WINDIR%\Logs\*" /s /f /q
+del "%SystemDrive%\logs\*" /s /f /q
+mkdir C:\Logs\
 
 echo ===
 echo Удаление временных файлов в директории 'C:\Windows\Temp'
@@ -161,6 +202,19 @@ timeout 2
 del "%SystemDrive%\AMD\*" /s /f /q
 
 echo ===
+echo Удаление папки по директории: 'C:\$WINDOWS.~BT'
+timeout 2
+rd "%SystemDrive%\$WINDOWS.~BT" /s /q
+
+echo ===
+echo Удаление папки по директории: 'C:\Windows10Upgrade'
+timeout 2
+rd "%SystemDrive%\Windows10Upgrade" /s /q
+
+
+C:\Windows10Upgrade\
+
+echo ===
 echo Открывает окно 'Очистка диска' и спрашивает, что хотите удалить. Следует проставить галочки.
 timeout 2
 %windir%\system32\cmd.exe /c "start cleanmgr /sageset:64541
@@ -200,7 +254,7 @@ net start wuauserv
 
 echo ===
 echo Завершения работы...
-echo itsCleanable Version: %Version%
+echo itsCleanable 'Version: %Version% | Update %Dates%'
 echo Автор: Захаров Илья Алексеевич.
 echo Новая версия github.com/itsmyfox в разделе 'itsCleanable'
 echo Свои идеи Вы можете предложить в разделе 'pull requests'
