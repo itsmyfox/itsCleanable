@@ -1,9 +1,9 @@
 @echo off
-set Version=1.0.9
-set Dates=17.05.2021
+set Version=1.1.12
+set Dates=21.05.2021
 title Диагностика и восстановление системных файлов "itsDiagnostic | Version: %Version% | Update %Dates%
 
-echo Через 7 секунд запуститься скрипт 'itsDiagnostic.bat / Version %Version% / Обновление от 09.05.2021' Если не хотите этого делать, нажмите комбинацию 'ctrl + c'
+echo Через 7 секунд запуститься скрипт 'itsDiagnostic.bat / Version %Version% / Обновление от %Dates%' Если не хотите этого делать, нажмите комбинацию 'ctrl + c'
 
 echo ===
 echo ========================= Сканирование системы =========================
@@ -28,7 +28,7 @@ timeout 2
 
 echo ===
 echo Завершения работы...
-echo itsCleanable 'Version: %Version% | Update %Dates%'
+echo itsCleanable 'Version: %Version% / Обновление от: %Dates%'
 echo Автор: Захаров Илья Алексеевич.
 echo Новая версия github.com/itsmyfox в разделе 'itsCleanable'
 echo Свои идеи Вы можете предложить в разделе 'pull requests'
