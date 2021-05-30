@@ -1,8 +1,66 @@
-
 Внимание, кодировка по стандарту для нормальной работы скриптов 866. По этому на gitHub может отображаться не корректно!
 
 # Запускаем itsCleanable START.bat от имени Администратора.
 Обязательно должны лежать рядом itsCleanable.bat и itsDiagnostic.bat
+
+# ===itsCleanable.bat + itsDiagnostic.bat | Версия 1.1.12 :===
+1. %SystemDrive% заменил на диск C:
+
+# ===itsCleanable.bat + itsDiagnostic.bat | Версия 1.1.11 :===
+20.05.2021
+1.1 Добавлен сценарий. Диагностика теперь работает опционально. Спрашивает, нужно ли проводить диагностику перед запуском скрипта.
+1.2 Если соглашаешься, с начало производиться очистка диска, затем диагностика.
+1.3 Если отказываешься, то производиться только очистка диска.
+
+# ===itsCleanable.bat + itsDiagnostic.bat | Версия 1.0.10 :===
+18.05.2021
+1. Удаление Кеша в Касперском по директории %SystemDrive%\ProgramData\Kaspersky Lab\KES\Cache
+2. Удаление временных файлов СекретНета patch.exe по директории %SystemDrive%\ProgramData\Security Code\Secret Net Studio\localcache\patch.exe
+3. Удаление дампов и логов %SystemDrive%\ProgramData\VMware\VDM\logs и %SystemDrive%\ProgramData\VMware\VDM\Dumps
+4. Удаление временных файлов по директории %SystemDrive%\ProgramData\Veeam\Setup\Temp\*
+5. Удаление кеша и логов по директориям:
+5.1. %WINDIR%\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Cache
+5.2. %WINDIR%\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Logs
+6. Удаление временных файлов в %WINDIR%\Installer\$PatchCache$
+7. Удаление временных файлов драйверов Рутокена по директории %SystemDrive%\ProgramData\Aktiv Co\
+8. Удаление временных файлов %SystemDrive%\ProgramData\Crypto Pro\Installer Cache
+9. Удаление временных файлов %SystemDrive%\\ProgramData\USOShared\Logs
+10. Удаление установочных файлов по директории:
+10.1. del "%USERPROFILE%\AppData\Local\Yandex\YandexBrowser\Application\browser.7z" /s /f /q
+10.2. del "%USERPROFILE%\AppData\Local\Yandex\YandexBrowser\Application\brand-package.cab" /s /f /q
+10.3. del "%USERPROFILE%\AppData\Local\Yandex\YandexBrowser\Application\setup.exe" /s /f /q
+
+11. Удаление Кеша поиска Windows:
+
+12. Остановка службы Windows Search
+12.1. net stop "Windows Search"
+12.2. REG ADD "HKLM\SOFTWARE\Microsoft\Windows Search" /v SetupCompletedSuccessfully /t REG_DWORD /d 0 /f
+12.3. del %PROGRAMDATA%\Microsoft\Search\Data\Applications\Windows\Windows.edb
+12.4. net start "Windows Search"
+
+13. Остановка не нужных служб
+13.1. echo XBOX
+13.2. net stop "Xbox Accessory Management Service"
+13.3. echo Телефония 
+13.4. net stop "net stop "TapiSrv""
+13.5. echo Биометрическая служба Windows
+13.6. net stop "WbioSrvc"
+13.7. echo Диспетчер проверки подлинности Xbox Live
+13.8. net stop "XblAuthManager"
+13.9. echo Родительский контроль
+13.10. net stop "WpcMonSvc"
+13.11. echo Сетевая служба Xbox Live
+13.12. net stop "XboxNetApiSvc"
+13.13. echo Служба Windows License Manager
+13.14. net stop "LicenseManager"
+13.15. echo Windows Mobile Hotspot
+13.16. net stop "icssvc"
+13.17. echo Служба демонстрации магазина
+13.18. net stop "RetailDemo"
+13.19. echo Служба управления радио
+13.20. net stop "RmSvc"
+13.21. echo Факс
+13.22. net stop "Fax"
 
 # ===itsCleanable.bat + itsDiagnostic.bat | Версия 1.0.9 :===
 1. Добавлен текст перед запуском программы.
