@@ -2,44 +2,44 @@
 chcp 866
 set Version=1.1.12
 set Dates=21.05.2021
-title Очистка диска "itsCleanable | Version: %Version% | Update %Dates%
+title ┼╜├з┬и├б├в┬к┬а ┬д┬и├б┬к┬а "itsCleanable | Version: %Version% | Update %Dates%
 
-echo Копирование скриптов в диск C.
+echo ┼а┬о┬п┬и├а┬о┬в┬а┬н┬и┬е ├б┬к├а┬и┬п├в┬о┬в ┬в ┬д┬и├б┬к C.
 set drive=%~dp0
 timeout 2
-copy "%drive%\itsCleanable.bat" "C:\"
+copy "%drive%\itsCleanable_optimized.bat" "C:\"
 copy "%drive%\itsDiagnostic.bat" "C:\"
 timeout 2
 
 echo ===
-echo Выполнять диагностику и восстановления системных файлов? (Y/N)
-choice /m "Выполнять диагностику и восстановления системных файлов?"
+echo тАЪ├л┬п┬о┬л┬н├п├в├м ┬д┬и┬а┬г┬н┬о├б├в┬и┬к├г ┬и ┬в┬о├б├б├в┬а┬н┬о┬в┬л┬е┬н┬и├п ├б┬и├б├в┬е┬м┬н├л├е ├д┬а┬й┬л┬о┬в? (Y/N)
+choice /m "тАЪ├л┬п┬о┬л┬н├п├в├м ┬д┬и┬а┬г┬н┬о├б├в┬и┬к├г ┬и ┬в┬о├б├б├в┬а┬н┬о┬в┬л┬е┬н┬и├п ├б┬и├б├в┬е┬м┬н├л├е ├д┬а┬й┬л┬о┬в?"
 
 if errorlevel 2 goto N
 if errorlevel 1 goto Y
 
 :N
 timeout 2
-echo Вы отказались от диагностики и восстановления системных файлов.
+echo тАЪ├л ┬о├в┬к┬а┬з┬а┬л┬и├б├м ┬о├в ┬д┬и┬а┬г┬н┬о├б├в┬и┬к┬и ┬и ┬в┬о├б├б├в┬а┬н┬о┬в┬л┬е┬н┬и├п ├б┬и├б├в┬е┬м┬н├л├е ├д┬а┬й┬л┬о┬в.
 goto NODIAGNOSTIC
 
 :Y
 
 echo ===
-msg * /TIME:60 "Запуск программы itsCleanable 'Version: %Version% | Update %Dates%'. Очистка компьютера от ненужных временных файлов может занять от 2 до 15 минут. В ходе выполнения программы Вам необходимо проставить галочки. Пожалуйста, подождите..."
+msg * /TIME:60 "тАб┬а┬п├г├б┬к ┬п├а┬о┬г├а┬а┬м┬м├л itsCleanable 'Version: %Version% | Update %Dates%'. ┼╜├з┬и├б├в┬к┬а ┬к┬о┬м┬п├м├о├в┬е├а┬а ┬о├в ┬н┬е┬н├г┬ж┬н├л├е ┬в├а┬е┬м┬е┬н┬н├л├е ├д┬а┬й┬л┬о┬в ┬м┬о┬ж┬е├в ┬з┬а┬н├п├в├м ┬о├в 2 ┬д┬о 15 ┬м┬и┬н├г├в. тАЪ ├е┬о┬д┬е ┬в├л┬п┬о┬л┬н┬е┬н┬и├п ┬п├а┬о┬г├а┬а┬м┬м├л тАЪ┬а┬м ┬н┬е┬о┬б├е┬о┬д┬и┬м┬о ┬п├а┬о├б├в┬а┬в┬и├в├м ┬г┬а┬л┬о├з┬к┬и. ┬П┬о┬ж┬а┬л├г┬й├б├в┬а, ┬п┬о┬д┬о┬ж┬д┬и├в┬е..."
 
 mkdir C:\LogsCache\
 For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a-%%b)
 echo ===
-call :color5 "Запуск itsCleanable.bat" Green
+call :color5 "тАб┬а┬п├г├б┬к itsCleanable_optimized.bat" Green
 :color5
 %Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor %2 %1
-powershell "C:\itsCleanable.bat | Add-Content C:\LogsCache\log_itsCleanable_%date:~0,2%-%date:~3,2%-%date:~8,2%_%mytime%.log -PassThru"
+powershell "C:\itsCleanable_optimized.bat | Add-Content C:\LogsCache\log_itsCleanable_%date:~0,2%-%date:~3,2%-%date:~8,2%_%mytime%.log -PassThru"
 
 For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a-%%b)
 
 echo ===
-call :color5 "Создаю Лог фаил и помещаю его по директории 'C:\LogsCache\'" Green
+call :color5 "тАШ┬о┬з┬д┬а├о тА╣┬о┬г ├д┬а┬и┬л ┬и ┬п┬о┬м┬е├й┬а├о ┬е┬г┬о ┬п┬о ┬д┬и├а┬е┬к├в┬о├а┬и┬и 'C:\LogsCache\'" Green
 :color5
 %Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor %2 %1
 
@@ -50,16 +50,16 @@ fsutil volume diskfree C:\
 
 For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a-%%b)
 
-del "C:\itsCleanable.bat" /f /q
+del "C:\itsCleanable_optimized.bat" /f /q
 
 echo ===
-call :color5 "Запуск 'itsDiagnostic.bat'" Green
+call :color5 "тАб┬а┬п├г├б┬к 'itsDiagnostic.bat'" Green
 :color5
 %Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor %2 %1
 powershell "C:\itsDiagnostic.bat | Add-Content C:\LogsCache\log_itsDiagnostic_%date:~0,2%-%date:~3,2%-%date:~8,2%_%mytime%.log -PassThru"
 
 del "C:\itsDiagnostic.bat" /f /q
-msg * /TIME:60 "Программа успешно завершена. Результаты очистки диска можно найти по следующему пути: 'C:\LogsCache'"
+msg * /TIME:60 "┬П├а┬о┬г├а┬а┬м┬м┬а ├г├б┬п┬е├и┬н┬о ┬з┬а┬в┬е├а├и┬е┬н┬а. ┬Р┬е┬з├г┬л├м├в┬а├в├л ┬о├з┬и├б├в┬к┬и ┬д┬и├б┬к┬а ┬м┬о┬ж┬н┬о ┬н┬а┬й├в┬и ┬п┬о ├б┬л┬е┬д├г├о├й┬е┬м├г ┬п├г├в┬и: 'C:\LogsCache'"
 start C:\LogsCache
 
 pause
@@ -68,20 +68,20 @@ exit
 :NODIAGNOSTIC
 
 echo ===
-msg * /TIME:60 "Запуск программы itsCleanable 'Version: %Version% | Update %Dates%'. Очистка компьютера от ненужных временных файлов может занять от 2 до 15 минут. В ходе выполнения программы Вам необходимо проставить галочки. Пожалуйста, подождите..."
+msg * /TIME:60 "тАб┬а┬п├г├б┬к ┬п├а┬о┬г├а┬а┬м┬м├л itsCleanable 'Version: %Version% | Update %Dates%'. ┼╜├з┬и├б├в┬к┬а ┬к┬о┬м┬п├м├о├в┬е├а┬а ┬о├в ┬н┬е┬н├г┬ж┬н├л├е ┬в├а┬е┬м┬е┬н┬н├л├е ├д┬а┬й┬л┬о┬в ┬м┬о┬ж┬е├в ┬з┬а┬н├п├в├м ┬о├в 2 ┬д┬о 15 ┬м┬и┬н├г├в. тАЪ ├е┬о┬д┬е ┬в├л┬п┬о┬л┬н┬е┬н┬и├п ┬п├а┬о┬г├а┬а┬м┬м├л тАЪ┬а┬м ┬н┬е┬о┬б├е┬о┬д┬и┬м┬о ┬п├а┬о├б├в┬а┬в┬и├в├м ┬г┬а┬л┬о├з┬к┬и. ┬П┬о┬ж┬а┬л├г┬й├б├в┬а, ┬п┬о┬д┬о┬ж┬д┬и├в┬е..."
 
 mkdir C:\LogsCache\
 For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a-%%b)
 echo ===
-call :color5 "Запуск itsCleanable.bat" Green
+call :color5 "тАб┬а┬п├г├б┬к itsCleanable_optimized.bat" Green
 :color5
 %Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor %2 %1
-powershell "C:\itsCleanable.bat | Add-Content C:\LogsCache\log_itsCleanable_%date:~0,2%-%date:~3,2%-%date:~8,2%_%mytime%.log -PassThru"
+powershell "C:\itsCleanable_optimized.bat | Add-Content C:\LogsCache\log_itsCleanable_%date:~0,2%-%date:~3,2%-%date:~8,2%_%mytime%.log -PassThru"
 
 For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a-%%b)
 
 echo ===
-call :color5 "Создаю Лог фаил и помещаю его по директории 'C:\LogsCache\'" Green
+call :color5 "тАШ┬о┬з┬д┬а├о тА╣┬о┬г ├д┬а┬и┬л ┬и ┬п┬о┬м┬е├й┬а├о ┬е┬г┬о ┬п┬о ┬д┬и├а┬е┬к├в┬о├а┬и┬и 'C:\LogsCache\'" Green
 :color5
 %Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor %2 %1
 
@@ -92,15 +92,15 @@ fsutil volume diskfree C:\
 
 For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a-%%b)
 
-del "C:\itsCleanable.bat" /f /q
+del "C:\itsCleanable_optimized.bat" /f /q
 
 echo ===
-call :color5 "Скрипт отработан. Для завершения нажмите любую клавишу." Green
+call :color5 "тАШ┬к├а┬и┬п├в ┬о├в├а┬а┬б┬о├в┬а┬н. тАЮ┬л├п ┬з┬а┬в┬е├а├и┬е┬н┬и├п ┬н┬а┬ж┬м┬и├в┬е ┬л├о┬б├г├о ┬к┬л┬а┬в┬и├и├г." Green
 :color5
 %Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor %2 %1
 
 del "C:\itsDiagnostic.bat" /f /q
-msg * /TIME:60 "Программа успешно завершена. Результаты очистки диска можно найти по следующему пути: 'C:\LogsCache'"
+msg * /TIME:60 "┬П├а┬о┬г├а┬а┬м┬м┬а ├г├б┬п┬е├и┬н┬о ┬з┬а┬в┬е├а├и┬е┬н┬а. ┬Р┬е┬з├г┬л├м├в┬а├в├л ┬о├з┬и├б├в┬к┬и ┬д┬и├б┬к┬а ┬м┬о┬ж┬н┬о ┬н┬а┬й├в┬и ┬п┬о ├б┬л┬е┬д├г├о├й┬е┬м├г ┬п├г├в┬и: 'C:\LogsCache'"
 start C:\LogsCache
 
 pause
