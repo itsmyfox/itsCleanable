@@ -1,11 +1,11 @@
 @echo off
 chcp 866
-set Username=‘‘’…€
+set Username=β€Λ†β€β€™β€¦Ε’β‚¬
 set Version=1.1.12
 set Dates=21.05.2021
-title η¨αβª  ¤¨αª  "itsCleanable | Version: %Version% | Update %Dates%
+title Ε½Γ§Β¨Γ΅ΓΆΒªΒ  Β¤Β¨Γ΅ΒªΒ  "itsCleanable | Version: %Version% | Update %Dates%
 
-echo —¥ΰ¥§ 7 α¥ªγ­¤ § ―γαβ¨βμαο αªΰ¨―β 'itsCleanable.bat / Version %Version% / ΅­®Ά«¥­¨¥ ®β %Dates%' - ®η¨αβª¨ ¤¨αª  ®β Άΰ¥¬¥­­λε ¨ ­¥¨α―®«μ§γ¥¬λε δ ©«®Ά. …α«¨ ­¥ ε®β¨β¥ νβ®£® ¤¥« βμ, ­ ¦¬¨β¥ ª®¬΅¨­ ζ¨ξ 'ctrl + c'
+echo β€”Β¥Γ Β¥Β§ 7 Γ΅Β¥ΒªΓ£Β­Β¤ Β§Β Β―Γ£Γ΅ΓΆΒ¨ΓΆΓ¬Γ΅Γ― Γ΅ΒªΓ Β¨Β―ΓΆ 'itsCleanable.bat / Version %Version% / Ε½Β΅Β­Β®ΒΆΒ«Β¥Β­Β¨Β¥ Β®ΓΆ %Dates%' - Β®Γ§Β¨Γ΅ΓΆΒªΒ¨ Β¤Β¨Γ΅ΒªΒ  Β®ΓΆ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Β¨ Β­Β¥Β¨Γ΅Β―Β®Β«Γ¬Β§Γ£Β¥Β¬Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ. β€¦Γ΅Β«Β¨ Β­Β¥ Γ¥Β®ΓΆΒ¨ΓΆΒ¥ Γ­ΓΆΒ®Β£Β® Β¤Β¥Β«Β ΓΆΓ¬, Β­Β Β¦Β¬Β¨ΓΆΒ¥ ΒªΒ®Β¬Β΅Β¨Β­Β Γ¦Β¨Γ® 'ctrl + c'
 
 For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a-%%b)
 
@@ -18,114 +18,114 @@ fsutil volume diskfree C:\
 timeout 7 /nobreak
 
 echo ===
-echo ========== αβ ­®Άª  α«γ¦΅ ­  ¬®¬¥­β ΰ ΅®βλ αªΰ¨―β  ==========
+echo ========== Ε½Γ΅ΓΆΒ Β­Β®ΒΆΒªΒ  Γ΅Β«Γ£Β¦Β΅ Β­Β  Β¬Β®Β¬Β¥Β­ΓΆ Γ Β Β΅Β®ΓΆΓ« Γ΅ΒªΓ Β¨Β―ΓΆΒ  ==========
 echo ===
 
-echo αβ ­®Άª  α«γ¦΅λ '–¥­βΰ ®΅­®Ά«¥­¨ο Windows'
+echo Ε½Γ΅ΓΆΒ Β­Β®ΒΆΒªΒ  Γ΅Β«Γ£Β¦Β΅Γ« 'β€“Β¥Β­ΓΆΓ  Β®Β΅Β­Β®ΒΆΒ«Β¥Β­Β¨Γ― Windows'
 timeout 2
 net stop wuauserv
 
 echo ===
-echo ========== αβ ­®Άª  ¤ΰγ£¨ε α«γ¦΅ ==========
+echo ========== Ε½Γ΅ΓΆΒ Β­Β®ΒΆΒªΒ  Β¤Γ Γ£Β£Β¨Γ¥ Γ΅Β«Γ£Β¦Β΅ ==========
 echo ===
 
 timeout 1
 echo XBOX
 net stop "Xbox Accessory Management Service"
 timeout 1
-echo ¨®¬¥βΰ¨η¥αª ο α«γ¦΅  Windows
+echo ΒΒ¨Β®Β¬Β¥ΓΆΓ Β¨Γ§Β¥Γ΅ΒªΒ Γ― Γ΅Β«Γ£Β¦Β΅Β  Windows
 net stop "WbioSrvc"
 timeout 1
-echo „¨α―¥βη¥ΰ ―ΰ®Ά¥ΰª¨ ―®¤«¨­­®αβ¨ Xbox Live
+echo β€Β¨Γ΅Β―Β¥ΓΆΓ§Β¥Γ  Β―Γ Β®ΒΆΒ¥Γ ΒªΒ¨ Β―Β®Β¤Β«Β¨Β­Β­Β®Γ΅ΓΆΒ¨ Xbox Live
 net stop "XblAuthManager"
 timeout 1
-echo ®¤¨β¥«μαª¨© ª®­βΰ®«μ
+echo ΒΒ®Β¤Β¨ΓΆΒ¥Β«Γ¬Γ΅ΒªΒ¨Β© ΒªΒ®Β­ΓΆΓ Β®Β«Γ¬
 net stop "WpcMonSvc"
 timeout 1
-echo ‘¥β¥Ά ο α«γ¦΅  Xbox Live
+echo β€Β¥ΓΆΒ¥ΒΆΒ Γ― Γ΅Β«Γ£Β¦Β΅Β  Xbox Live
 net stop "XboxNetApiSvc"
 timeout 1
-echo ‘«γ¦΅  Windows License Manager
+echo β€Β«Γ£Β¦Β΅Β  Windows License Manager
 net stop "LicenseManager"
 timeout 1
 echo Windows Mobile Hotspot
 net stop "icssvc"
 timeout 1
-echo ‘«γ¦΅  ¤¥¬®­αβΰ ζ¨¨ ¬ £ §¨­ 
+echo β€Β«Γ£Β¦Β΅Β  Β¤Β¥Β¬Β®Β­Γ΅ΓΆΓ Β Γ¦Β¨Β¨ Β¬Β Β£Β Β§Β¨Β­Β 
 net stop "RetailDemo"
 timeout 1
-echo ‘«γ¦΅  γ―ΰ Ά«¥­¨ο ΰ ¤¨®
+echo β€Β«Γ£Β¦Β΅Β  Γ£Β―Γ Β ΒΆΒ«Β¥Β­Β¨Γ― Γ Β Β¤Β¨Β®
 net stop "RmSvc"
 timeout 1
-echo ” ªα
+echo β€Β ΒªΓ΅
 net stop "Fax"
 
 echo ===
-echo ========== αβ ­®Άª  α«γ¦΅λ ―®¨αª  ¤«ο γ¤ «¥­¨ο δ ©«  ==========
+echo ========== Ε½Γ΅ΓΆΒ Β­Β®ΒΆΒªΒ  Γ΅Β«Γ£Β¦Β΅Γ« Β―Β®Β¨Γ΅ΒªΒ  Β¤Β«Γ― Γ£Β¤Β Β«Β¥Β­Β¨Γ― Γ¤Β Β©Β«Β  ==========
 echo ===
 
 echo ===
-echo Windows.edb οΆ«ο¥βαο ¨­¤¥ªα­®© ΅ §®© ¤ ­­λε α«γ¦΅λ ―®¨αª  Windows. « £®¤ ΰο β ª®© ¨­¤¥ªα ζ¨¨ ―®¨αª ―ΰ®¨αε®¤¨β ΅λαβΰ¥¥ ¨ νδδ¥ªβ¨Ά­¥¥. ¥®΅ε®¤¨¬® «¨ γ¤ «οβμ Windows.edb ¨ £¥­¥ΰ¨ΰ®Ά βμ ­®Άλ© δ ¨« ¤«ο ®αΆ®΅®¦¤¥­¨ο ―ΰ®αβΰ ­αβΆ ? (Y/N)
-choice /m "Windows.edb οΆ«ο¥βαο ¨­¤¥ªα­®© ΅ §®© ¤ ­­λε α«γ¦΅λ ―®¨αª  Windows. « £®¤ ΰο β ª®© ¨­¤¥ªα ζ¨¨ ―®¨αª ―ΰ®¨αε®¤¨β ΅λαβΰ¥¥ ¨ νδδ¥ªβ¨Ά­¥¥. ¥®΅ε®¤¨¬® «¨ γ¤ «οβμ Windows.edb ¨ £¥­¥ΰ¨ΰ®Ά βμ ­®Άλ© δ ¨« ¤«ο ®αΆ®΅®¦¤¥­¨ο ―ΰ®αβΰ ­αβΆ ?"
+echo Windows.edb Γ―ΒΆΒ«Γ―Β¥ΓΆΓ΅Γ― Β¨Β­Β¤Β¥ΒªΓ΅Β­Β®Β© Β΅Β Β§Β®Β© Β¤Β Β­Β­Γ«Γ¥ Γ΅Β«Γ£Β¦Β΅Γ« Β―Β®Β¨Γ΅ΒªΒ  Windows. ΒΒ«Β Β£Β®Β¤Β Γ Γ― ΓΆΒ ΒªΒ®Β© Β¨Β­Β¤Β¥ΒªΓ΅Β Γ¦Β¨Β¨ Β―Β®Β¨Γ΅Βª Β―Γ Β®Β¨Γ΅Γ¥Β®Β¤Β¨ΓΆ Β΅Γ«Γ΅ΓΆΓ Β¥Β¥ Β¨ Γ­Γ¤Γ¤Β¥ΒªΓΆΒ¨ΒΆΒ­Β¥Β¥. ΒΒ¥Β®Β΅Γ¥Β®Β¤Β¨Β¬Β® Β«Β¨ Γ£Β¤Β Β«Γ―ΓΆΓ¬ Windows.edb Β¨ Β£Β¥Β­Β¥Γ Β¨Γ Β®ΒΆΒ ΓΆΓ¬ Β­Β®ΒΆΓ«Β© Γ¤Β Β¨Β« Β¤Β«Γ― Β®Γ΅ΒΆΒ®Β΅Β®Β¦Β¤Β¥Β­Β¨Γ― Β―Γ Β®Γ΅ΓΆΓ Β Β­Γ΅ΓΆΒΆΒ ? (Y/N)
+choice /m "Windows.edb Γ―ΒΆΒ«Γ―Β¥ΓΆΓ΅Γ― Β¨Β­Β¤Β¥ΒªΓ΅Β­Β®Β© Β΅Β Β§Β®Β© Β¤Β Β­Β­Γ«Γ¥ Γ΅Β«Γ£Β¦Β΅Γ« Β―Β®Β¨Γ΅ΒªΒ  Windows. ΒΒ«Β Β£Β®Β¤Β Γ Γ― ΓΆΒ ΒªΒ®Β© Β¨Β­Β¤Β¥ΒªΓ΅Β Γ¦Β¨Β¨ Β―Β®Β¨Γ΅Βª Β―Γ Β®Β¨Γ΅Γ¥Β®Β¤Β¨ΓΆ Β΅Γ«Γ΅ΓΆΓ Β¥Β¥ Β¨ Γ­Γ¤Γ¤Β¥ΒªΓΆΒ¨ΒΆΒ­Β¥Β¥. ΒΒ¥Β®Β΅Γ¥Β®Β¤Β¨Β¬Β® Β«Β¨ Γ£Β¤Β Β«Γ―ΓΆΓ¬ Windows.edb Β¨ Β£Β¥Β­Β¥Γ Β¨Γ Β®ΒΆΒ ΓΆΓ¬ Β­Β®ΒΆΓ«Β© Γ¤Β Β¨Β« Β¤Β«Γ― Β®Γ΅ΒΆΒ®Β΅Β®Β¦Β¤Β¥Β­Β¨Γ― Β―Γ Β®Γ΅ΓΆΓ Β Β­Γ΅ΓΆΒΆΒ ?"
 
 if errorlevel 2 goto N
 if errorlevel 1 goto Y
 
 :N
 timeout 2
-echo ‚λ ®βª § «¨αμ ®β γ¤ «¥­¨ο δ ©«  Windows.edb (“¤ «¥­¨ο ¨­¤¥ªα­®© ΅ §λ ¤ ­­λε α«γ¦΅λ ―®¨αª  Windows).
+echo β€Γ« Β®ΓΆΒªΒ Β§Β Β«Β¨Γ΅Γ¬ Β®ΓΆ Γ£Β¤Β Β«Β¥Β­Β¨Γ― Γ¤Β Β©Β«Β  Windows.edb (β€Β¤Β Β«Β¥Β­Β¨Γ― Β¨Β­Β¤Β¥ΒªΓ΅Β­Β®Β© Β΅Β Β§Γ« Β¤Β Β­Β­Γ«Γ¥ Γ΅Β«Γ£Β¦Β΅Γ« Β―Β®Β¨Γ΅ΒªΒ  Windows).
 goto NOWINDOWSEDB
 
 :Y
 
-echo αβ ­®Άª  α«γ¦΅λ '®¨αª Windows'
+echo Ε½Γ΅ΓΆΒ Β­Β®ΒΆΒªΒ  Γ΅Β«Γ£Β¦Β΅Γ« 'ΒΒ®Β¨Γ΅Βª Windows'
 timeout 2
 net stop "Windows Search"
-echo “¤ «¥­¨¥ δ ©«  Windows.edb ¨ £¥­¥ΰ ζ¨ο ­®Ά®£® δ ©« .
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ Γ¤Β Β©Β«Β  Windows.edb Β¨ Β£Β¥Β­Β¥Γ Β Γ¦Β¨Γ― Β­Β®ΒΆΒ®Β£Β® Γ¤Β Β©Β«Β .
 timeout 2
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows Search" /v SetupCompletedSuccessfully /t REG_DWORD /d 0 /f
 del %PROGRAMDATA%\Microsoft\Search\Data\Applications\Windows\Windows.edb
 timeout 2
 
 echo ===
-echo ========== ‡ ―γαª α«γ¦΅λ ―®¨αª  ¤«ο £¥­¥ΰ ζ¨¨ δ ©«  ==========
+echo ========== β€΅Β Β―Γ£Γ΅Βª Γ΅Β«Γ£Β¦Β΅Γ« Β―Β®Β¨Γ΅ΒªΒ  Β¤Β«Γ― Β£Β¥Β­Β¥Γ Β Γ¦Β¨Β¨ Γ¤Β Β©Β«Β  ==========
 echo ===
 
-echo ‡ ―γαª α«γ¦΅λ '®¨αª Windows'
+echo β€΅Β Β―Γ£Γ΅Βª Γ΅Β«Γ£Β¦Β΅Γ« 'ΒΒ®Β¨Γ΅Βª Windows'
 net start "Windows Search"
 
 :NOWINDOWSEDB
 
 echo ===
-echo βªΰλΆ ¥β ®ª­® 'η¨αβª  ¤¨αª ' ¨ α―ΰ θ¨Ά ¥β, ηβ® ε®β¨β¥ γ¤ «¨βμ. ‘«¥¤γ¥β ―ΰ®αβ Ά¨βμ £ «®ηª¨.
+echo Ε½ΓΆΒªΓ Γ«ΒΆΒ Β¥ΓΆ Β®ΒªΒ­Β® 'Ε½Γ§Β¨Γ΅ΓΆΒªΒ  Β¤Β¨Γ΅ΒªΒ ' Β¨ Γ΅Β―Γ Β Γ¨Β¨ΒΆΒ Β¥ΓΆ, Γ§ΓΆΒ® Γ¥Β®ΓΆΒ¨ΓΆΒ¥ Γ£Β¤Β Β«Β¨ΓΆΓ¬. β€Β«Β¥Β¤Γ£Β¥ΓΆ Β―Γ Β®Γ΅ΓΆΒ ΒΆΒ¨ΓΆΓ¬ Β£Β Β«Β®Γ§ΒªΒ¨.
 timeout 2
 %windir%\system32\cmd.exe /c "start cleanmgr /sageset:64541
 
 echo ===
-echo ¥®΅ε®¤¨¬λ¥ £ «®ηª¨ ―ΰ®αβ Ά¨«? (Y/N)
-choice /m "¥®΅ε®¤¨¬λ¥ £ «®ηª¨ ―ΰ®αβ Ά¨«?"
+echo ΒΒ¥Β®Β΅Γ¥Β®Β¤Β¨Β¬Γ«Β¥ Β£Β Β«Β®Γ§ΒªΒ¨ Β―Γ Β®Γ΅ΓΆΒ ΒΆΒ¨Β«? (Y/N)
+choice /m "ΒΒ¥Β®Β΅Γ¥Β®Β¤Β¨Β¬Γ«Β¥ Β£Β Β«Β®Γ§ΒªΒ¨ Β―Γ Β®Γ΅ΓΆΒ ΒΆΒ¨Β«?"
 
 if errorlevel 2 goto N
 if errorlevel 1 goto Y
 
 :N
 timeout 2
-echo ‚λ ®βª § «¨αμ ®β ®η¨αβª¨ ¤¨αª .
+echo β€Γ« Β®ΓΆΒªΒ Β§Β Β«Β¨Γ΅Γ¬ Β®ΓΆ Β®Γ§Β¨Γ΅ΓΆΒªΒ¨ Β¤Β¨Γ΅ΒªΒ .
 goto COMPLETE
 
 :Y
 
 timeout 2
-echo ΰ®¤®«¦ ¥¬ ―ΰ®¨§Ά®¤¨βμ ®η¨αβªγ ¤¨αª ...
-echo ®¤®¦¤¨β¥, ΰ ΅®β ¥β ª®¬ ­¤  cleanmgr.exe /SETUP
+echo ΒΓ Β®Β¤Β®Β«Β¦Β Β¥Β¬ Β―Γ Β®Β¨Β§ΒΆΒ®Β¤Β¨ΓΆΓ¬ Β®Γ§Β¨Γ΅ΓΆΒªΓ£ Β¤Β¨Γ΅ΒªΒ ...
+echo ΒΒ®Β¤Β®Β¦Β¤Β¨ΓΆΒ¥, Γ Β Β΅Β®ΓΆΒ Β¥ΓΆ ΒªΒ®Β¬Β Β­Β¤Β  cleanmgr.exe /SETUP
 cleanmgr.exe /SETUP
-echo ‡ ―γαª ¥βαο cleanmgr...
+echo β€΅Β Β―Γ£Γ΅ΒªΒ Β¥ΓΆΓ΅Γ― cleanmgr...
 %windir%\system32\cmd.exe /c "start cleanmgr /sagerun:64541
 
 :COMPLETE
 
 echo ===
-echo ========== ‚λ¤ ξ ®α®΅λ¥ ―ΰ Ά  ­  Άΰ¥¬¥­­λ¥ ― ―ª¨ ==========
+echo ========== β€Γ«Β¤Β Γ® Β®Γ΅Β®Β΅Γ«Β¥ Β―Γ Β ΒΆΒ  Β­Β  ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Β¥ Β―Β Β―ΒªΒ¨ ==========
 echo ===
 timeout 2
 %PROGRAMDATA%\Microsoft\Search\Data\Applications\Windows\Windows.edb
@@ -143,7 +143,7 @@ TAKEOWN /f "%WINDIR%\assembly\tmp" /r /d y && ICACLS "%WINDIR%\assembly\tmp" /gr
 TAKEOWN /f "%WINDIR%\SoftwareDistribution\Download\SharedFileCache" /r /d y && ICACLS "%WINDIR%\SoftwareDistribution\Download\SharedFileCache" /grant %Username%:F /t
 TAKEOWN /f "%USERPROFILE%\AppData\Local\Temp" /r /d y && ICACLS "%USERPROFILE%\AppData\Local\Temp" /grant %Username%:F /t
 TAKEOWN /f "C:\Users\User\AppData\Local\Temp" /r /d y && ICACLS "C:\Users\User\AppData\Local\Temp" /grant %Username%:F /t
-TAKEOWN /f "C:\Users\€¤¬¨­¨αβΰ β®ΰ\AppData\Local\Temp" /r /d y && ICACLS "C:\Users\€¤¬¨­¨αβΰ β®ΰ\AppData\Local\Temp" /grant %Username%:F /t
+TAKEOWN /f "C:\Users\β‚¬Β¤Β¬Β¨Β­Β¨Γ΅ΓΆΓ Β ΓΆΒ®Γ \AppData\Local\Temp" /r /d y && ICACLS "C:\Users\β‚¬Β¤Β¬Β¨Β­Β¨Γ΅ΓΆΓ Β ΓΆΒ®Γ \AppData\Local\Temp" /grant %Username%:F /t
 TAKEOWN /f "C:\ProgramData\Microsoft\Diagnosis" /r /d y && ICACLS "C:\ProgramData\Microsoft\Diagnosis" /grant %Username%:F /t
 TAKEOWN /f "C:\ProgramData\Kaspersky Lab\KES\Temp" /r /d y && ICACLS "C:\ProgramData\Kaspersky Lab\KES\Temp" /grant %Username%:F /t
 TAKEOWN /f "C:\ProgramData\Kaspersky Lab\KES\Cache" /r /d y && ICACLS "C:\ProgramData\Kaspersky Lab\KES\Cache" /grant %Username%:F /t
@@ -176,46 +176,46 @@ TAKEOWN /f "C:\ProgramData\Crypto Pro\Installer Cache" /r /d y && ICACLS "C:\Pro
 TAKEOWN /f "%USERPROFILE%\AppData\Local\Yandex\YandexBrowser\Application" /r /d y && ICACLS "%USERPROFILE%\AppData\Local\Yandex\YandexBrowser\Application" /grant %Username%:F /t
 
 echo ===
-echo ========== η¨αβª  ¤¨αª  ®β Άΰ¥¬¥­­λε δ ©«®Ά ==========
+echo ========== Ε½Γ§Β¨Γ΅ΓΆΒªΒ  Β¤Β¨Γ΅ΒªΒ  Β®ΓΆ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ ==========
 echo ===
 
 echo ===
-echo ========== η¨αβª  Ά ― ―ª¥ "C:\Windows" ==========
+echo ========== Ε½Γ§Β¨Γ΅ΓΆΒªΒ  ΒΆ Β―Β Β―ΒªΒ¥ "C:\Windows" ==========
 echo ===
 
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά Ά ¤¨ΰ¥ªβ®ΰ¨¨ 'C:\Windows\Logs\' ¨ 'C:\logs\'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ ΒΆ Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨ 'C:\Windows\Logs\' Β¨ 'C:\logs\'
 timeout 2
 del "%WINDIR%\Logs\*" /s /f /q
 del "C:\logs\*" /s /f /q
 mkdir C:\Logs\
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά Ά ¤¨ΰ¥ªβ®ΰ¨¨ 'C:\Windows\Temp'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ ΒΆ Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨ 'C:\Windows\Temp'
 timeout 2
 del "%WINDIR%\Temp\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά Ά ¤¨ΰ¥ªβ®ΰ¨¨ 'C:\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Logs\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ ΒΆ Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨ 'C:\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Logs\*'
 timeout 2
 del "%WINDIR%\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Logs\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά Ά ¤¨ΰ¥ªβ®ΰ¨¨ 'C:\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Cache\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ ΒΆ Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨ 'C:\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Cache\*'
 timeout 2
 del "%WINDIR%\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Cache\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\Windows\SoftwareDistribution\Download\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\Windows\SoftwareDistribution\Download\*'
 timeout 2
 del "%WINDIR%\SoftwareDistribution\Download\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\Windows\Installer\$PatchCache$\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\Windows\Installer\$PatchCache$\*'
 timeout 2
 del "%WINDIR%\Installer\$PatchCache$\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\Windows\assembly\NativeImages_*\temp\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\Windows\assembly\NativeImages_*\temp\*'
 timeout 2
 del "%WINDIR%\assembly\NativeImages_v2.0.50727_32\temp\*" /s /f /q
 del "%WINDIR%\assembly\NativeImages_v4.0.30319_64\temp\*" /s /f /q
@@ -225,164 +225,164 @@ del "%WINDIR%\assembly\temp\*" /s /f /q
 del "%WINDIR%\assembly\tmp\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\Windows\SoftwareDistribution\Download\SharedFileCache'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\Windows\SoftwareDistribution\Download\SharedFileCache'
 timeout 2
 del "%WINDIR%\SoftwareDistribution\Download\SharedFileCache\*" /s /f /q
 
 echo ===
-echo ========== η¨αβª  Ά ― ―ª ε "AppData" ==========
+echo ========== Ε½Γ§Β¨Γ΅ΓΆΒªΒ  ΒΆ Β―Β Β―ΒªΒ Γ¥ "AppData" ==========
 echo ===
 
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: '\AppData\Local\Temp\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: '\AppData\Local\Temp\*'
 timeout 2
 del "%USERPROFILE%\AppData\Local\Temp\*" /s /f /q
 
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: '\AppData\Local\Yandex\YandexBrowser\'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: '\AppData\Local\Yandex\YandexBrowser\'
 timeout 2
 del "%USERPROFILE%\AppData\Local\Yandex\YandexBrowser\Application\browser.7z" /s /f /q
 del "%USERPROFILE%\AppData\Local\Yandex\YandexBrowser\Application\brand-package.cab" /s /f /q
 del "%USERPROFILE%\AppData\Local\Yandex\YandexBrowser\Application\setup.exe" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\Users\User\AppData\Local\Temp\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\Users\User\AppData\Local\Temp\*'
 timeout 2
 del "C:\Users\User\AppData\Local\Temp\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\Users\€¤¬¨­¨αβΰ β®ΰ\AppData\Local\Temp\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\Users\β‚¬Β¤Β¬Β¨Β­Β¨Γ΅ΓΆΓ Β ΓΆΒ®Γ \AppData\Local\Temp\*'
 timeout 2
-del "C:\Users\€¤¬¨­¨αβΰ β®ΰ\AppData\Local\Temp\*" /s /f /q
+del "C:\Users\β‚¬Β¤Β¬Β¨Β­Β¨Γ΅ΓΆΓ Β ΓΆΒ®Γ \AppData\Local\Temp\*" /s /f /q
 
 echo ===
-echo ========== η¨αβª  Ά ― ―ª¥ "ProgramData" ==========
+echo ========== Ε½Γ§Β¨Γ΅ΓΆΒªΒ  ΒΆ Β―Β Β―ΒªΒ¥ "ProgramData" ==========
 echo ===
 
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά Ά ¤¨ΰ¥ªβ®ΰ¨¨ 'C:\ProgramData\Crypto Pro\Installer Cache\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ ΒΆ Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨ 'C:\ProgramData\Crypto Pro\Installer Cache\*'
 timeout 2
 del "C:\ProgramData\Crypto Pro\Installer Cache\*" /s /f /q
 
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά Ά ¤¨ΰ¥ªβ®ΰ¨¨ 'C:\ProgramData\Security Code\Secret Net Studio\localcache\patch.exe' ¨ 'ι¥β ―® Άα¥© ― ―ª¥ ¨ γ¤ «ο¥β patch.exe'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ ΒΆ Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨ 'C:\ProgramData\Security Code\Secret Net Studio\localcache\patch.exe' Β¨ 'Λ†Γ©Β¥ΓΆ Β―Β® ΒΆΓ΅Β¥Β© Β―Β Β―ΒªΒ¥ Β¨ Γ£Β¤Β Β«Γ―Β¥ΓΆ patch.exe'
 timeout 2
 del "C:\ProgramData\Security Code\Secret Net Studio\localcache\patch.exe" /s /f /q
 
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά Ά ¤¨ΰ¥ªβ®ΰ¨¨ 'C:\ProgramData\Aktiv Co\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ ΒΆ Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨ 'C:\ProgramData\Aktiv Co\*'
 timeout 2
 del "C:\ProgramData\Aktiv Co\*" /s /f /q
 
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά Ά ¤¨ΰ¥ªβ®ΰ¨¨ 'C:\ProgramData\USOShared\Logs\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ ΒΆ Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨ 'C:\ProgramData\USOShared\Logs\*'
 timeout 2
 del "C:\ProgramData\USOShared\Logs\*" /s /f /q
 
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά Ά ¤¨ΰ¥ªβ®ΰ¨¨ 'C:\ProgramData\VMware\VDM\logs' ¨ 'C:\ProgramData\VMware\VDM\Dumps\'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ ΒΆ Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨ 'C:\ProgramData\VMware\VDM\logs' Β¨ 'C:\ProgramData\VMware\VDM\Dumps\'
 timeout 2
 del "C:\ProgramData\VMware\VDM\logs\*" /s /f /q
 del "C:\ProgramData\VMware\VDM\Dumps\*" /s /f /q
 
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\ProgramData\Microsoft\Diagnosis\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\ProgramData\Microsoft\Diagnosis\*'
 timeout 2
 del "C:\ProgramData\Microsoft\Diagnosis\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\ProgramData\Kaspersky Lab\KES\Temp\* ¨ C:\ProgramData\Kaspersky Lab\KES\Cache\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\ProgramData\Kaspersky Lab\KES\Temp\* Β¨ C:\ProgramData\Kaspersky Lab\KES\Cache\*'
 timeout 2
 del "C:\ProgramData\Kaspersky Lab\KES\Temp\*" /s /f /q
 del "C:\ProgramData\Kaspersky Lab\KES\Cache\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\ProgramData\KasperskyLab\adminkit\1103\$FTCITmp\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\ProgramData\KasperskyLab\adminkit\1103\$FTCITmp\*'
 timeout 2
 del "C:\ProgramData\KasperskyLab\adminkit\1103\$FTCITmp\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\ProgramData\Intel\Logs\*' ¨ 'C:\ProgramData\Intel\Package Cache\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\ProgramData\Intel\Logs\*' Β¨ 'C:\ProgramData\Intel\Package Cache\*'
 timeout 2
 del "C:\ProgramData\Intel\Logs\*" /s /f /q
 del "C:\ProgramData\Intel\Package Cache\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\ProgramData\Veeam\Setup\Temp\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\ProgramData\Veeam\Setup\Temp\*'
 timeout 2
 del "C:\ProgramData\Veeam\Setup\Temp\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\ProgramData\Crypto Pro\Installer Cache\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\ProgramData\Crypto Pro\Installer Cache\*'
 timeout 2
 del "C:\ProgramData\Crypto Pro\Installer Cache\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\ProgramData\Package Cache\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\ProgramData\Package Cache\*'
 timeout 2
 del "C:\ProgramData\Package Cache\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\ProgramData\Oracle\Java\installcache_x64\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\ProgramData\Oracle\Java\installcache_x64\*'
 timeout 2
 del "C:\ProgramData\Oracle\Java\installcache_x64\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\ProgramData\LANDesk\Log\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\ProgramData\LANDesk\Log\*'
 timeout 2
 del "C:\ProgramData\LANDesk\Log\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\ProgramData\Intel\Logs\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\ProgramData\Intel\Logs\*'
 timeout 2
 del "C:\ProgramData\Intel\Logs\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\ProgramData\LANDesk\Temp\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\ProgramData\LANDesk\Temp\*'
 timeout 2
 del "C:\ProgramData\LANDesk\Temp\*" /s /f /q
 
 echo ===
-echo ========== η¨αβª  Ά ¤¨αª¥ "C:\" ==========
+echo ========== Ε½Γ§Β¨Γ΅ΓΆΒªΒ  ΒΆ Β¤Β¨Γ΅ΒªΒ¥ "C:\" ==========
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\Intel\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\Intel\*'
 timeout 2
 del "C:\Intel\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\SWSetup\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\SWSetup\*'
 timeout 2
 del "C:\SWSetup\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\MSOCache\All Users\*'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\MSOCache\All Users\*'
 timeout 2
 del "C:\MSOCache\All Users\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ Άΰ¥¬¥­­λε δ ©«®Ά ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\AMD'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ ΒΆΓ Β¥Β¬Β¥Β­Β­Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\AMD'
 timeout 2
 del "C:\AMD\*" /s /f /q
 
 echo ===
-echo “¤ «¥­¨¥ ― ―ª¨ ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\$WINDOWS.~BT'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ Β―Β Β―ΒªΒ¨ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\$WINDOWS.~BT'
 timeout 2
 rd "C:\$WINDOWS.~BT" /s /q
 
 echo ===
-echo “¤ «¥­¨¥ ― ―ª¨ ―® ¤¨ΰ¥ªβ®ΰ¨¨: 'C:\Windows10Upgrade'
+echo β€Β¤Β Β«Β¥Β­Β¨Β¥ Β―Β Β―ΒªΒ¨ Β―Β® Β¤Β¨Γ Β¥ΒªΓΆΒ®Γ Β¨Β¨: 'C:\Windows10Upgrade'
 timeout 2
 rd "C:\Windows10Upgrade" /s /q
 
 echo ===
-echo ========== ‡ ―γαª α«γ¦΅ ==========
+echo ========== β€΅Β Β―Γ£Γ΅Βª Γ΅Β«Γ£Β¦Β΅ ==========
 echo ===
 
-echo ‡ ―γαª α«γ¦΅λ '–¥­βΰ ®΅­®Ά«¥­¨ο Windows'
+echo β€΅Β Β―Γ£Γ΅Βª Γ΅Β«Γ£Β¦Β΅Γ« 'β€“Β¥Β­ΓΆΓ  Β®Β΅Β­Β®ΒΆΒ«Β¥Β­Β¨Γ― Windows'
 timeout 2
 net start wuauserv
 
 echo ===
-echo ‡ Ά¥ΰθ¥­¨ο ΰ ΅®βλ...
-echo itsCleanable 'Version: %Version% / ΅­®Ά«¥­¨¥ ®β: %Dates%'
-echo €Άβ®ΰ: ‡ ε ΰ®Ά «μο €«¥ªα¥¥Ά¨η.
-echo ®Ά ο Ά¥ΰα¨ο github.com/itsmyfox Ά ΰ §¤¥«¥ 'itsCleanable'
-echo ‘Ά®¨ ¨¤¥¨ ‚λ ¬®¦¥β¥ ―ΰ¥¤«®¦¨βμ Ά ΰ §¤¥«¥ 'pull requests'
+echo β€΅Β ΒΆΒ¥Γ Γ¨Β¥Β­Β¨Γ― Γ Β Β΅Β®ΓΆΓ«...
+echo itsCleanable 'Version: %Version% / Ε½Β΅Β­Β®ΒΆΒ«Β¥Β­Β¨Β¥ Β®ΓΆ: %Dates%'
+echo β‚¬ΒΆΓΆΒ®Γ : β€΅Β Γ¥Β Γ Β®ΒΆ Λ†Β«Γ¬Γ― β‚¬Β«Β¥ΒªΓ΅Β¥Β¥ΒΆΒ¨Γ§.
+echo ΒΒ®ΒΆΒ Γ― ΒΆΒ¥Γ Γ΅Β¨Γ― github.com/itsmyfox ΒΆ Γ Β Β§Β¤Β¥Β«Β¥ 'itsCleanable'
+echo β€ΒΆΒ®Β¨ Β¨Β¤Β¥Β¨ β€Γ« Β¬Β®Β¦Β¥ΓΆΒ¥ Β―Γ Β¥Β¤Β«Β®Β¦Β¨ΓΆΓ¬ ΒΆ Γ Β Β§Β¤Β¥Β«Β¥ 'pull requests'
 
 echo ===
-echo ¦¨¤ ¥¬ § Ά¥ΰθ¥­¨ο ®η¨αβª¨ ¤¨αª ...
+echo Ε½Β¦Β¨Β¤Β Β¥Β¬ Β§Β ΒΆΒ¥Γ Γ¨Β¥Β­Β¨Γ― Β®Γ§Β¨Γ΅ΓΆΒªΒ¨ Β¤Β¨Γ΅ΒªΒ ...
 timeout 7
 
 exit 
