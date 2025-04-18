@@ -385,4 +385,4 @@ echo ===
 echo Ž¦¨¤ ¥¬ § ¢¥àè¥­¨ï ®ç¨áâª¨ ¤¨áª ...
 timeout 7
 
-exit 
+pause
