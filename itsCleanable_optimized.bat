@@ -34,9 +34,7 @@ del "C:\ProgramData\Microsoft\Diagnosis\ETLLogs\*_APPRAISER_Utc.etl" /s /f /q
 echo ===
 echo Свободное место на диске до очистки
 mkdir %SYSTEMDRIVE%\LogsCache\ 2>nul
-chcp 1251
 fsutil volume diskfree %SYSTEMDRIVE%\ > %SYSTEMDRIVE%\LogsCache\log-volume-start-itsCleanable_%datetime%.txt
-chcp 866
 fsutil volume diskfree %SYSTEMDRIVE%\
 
 timeout 3 /nobreak
@@ -463,9 +461,7 @@ del "%SYSTEMDRIVE%\System Volume Information\*" /s /f /q
 :: Сравнение свободного места до и после очистки
 echo ===
 echo Свободное место на диске после очистки
-chcp 1251
 fsutil volume diskfree %SYSTEMDRIVE%\ > %SYSTEMDRIVE%\LogsCache\log-volume-end-itsCleanable_%datetime%.txt
-chcp 866
 fsutil volume diskfree %SYSTEMDRIVE%\
 
 echo ===
