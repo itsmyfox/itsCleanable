@@ -1,5 +1,5 @@
 @echo off
-chcp 866
+chcp 1251
 set Username=Администратор
 set Version=2.0.0
 set Dates=18.04.2025
